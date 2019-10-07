@@ -1,11 +1,11 @@
-# react-native-smart-barcode
+# react-native-barcode-scan
 
 [![npm](https://img.shields.io/npm/v/react-native-smart-barcode.svg)](https://www.npmjs.com/package/react-native-smart-barcode)
 [![npm](https://img.shields.io/npm/dm/react-native-smart-barcode.svg)](https://www.npmjs.com/package/react-native-smart-barcode)
 [![npm](https://img.shields.io/npm/dt/react-native-smart-barcode.svg)](https://www.npmjs.com/package/react-native-smart-barcode)
 [![npm](https://img.shields.io/npm/l/react-native-smart-barcode.svg)](https://github.com/react-native-component/react-native-smart-barcode/blob/master/LICENSE)
 
-A smart barcode scanner component for React Native app.
+A  barcode scanner component for React Native app.
 The library uses [https://github.com/zxing/zxing][1] to decode the barcodes for android, and also supports ios.
 
 ## Preview
@@ -15,13 +15,8 @@ The library uses [https://github.com/zxing/zxing][1] to decode the barcodes for 
 ## Installation
 
 ```
-npm install react-native-smart-barcode --save
+npm install react-native-barcode-scan --save
 ```
-
-## Notice
-
-It can only be used greater-than-equal react-native 0.4.0 for ios, if you want to use the package less-than react-native 0.4.0, use `npm install react-native-smart-barcode@untilRN0.40 --save`
-
 
 ## Installation (iOS)
 
@@ -41,8 +36,8 @@ It can only be used greater-than-equal react-native 0.4.0 for ios, if you want t
 
 ```
 ...
-include ':react-native-smart-barcode'
-project(':react-native-smart-barcode').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-smart-barcode/android')
+include ':react-native-barcode-scan'
+project(':react-native-barcode-scan').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-barcode-scan/android')
 ```
 
 * In `android/app/build.gradle`
@@ -52,7 +47,7 @@ project(':react-native-smart-barcode').projectDir = new File(rootProject.project
 dependencies {
     ...
     // From node_modules
-    compile project(':react-native-smart-barcode')
+    compile project(':react-native-barcode-scan')
 }
 ```
 
@@ -86,34 +81,6 @@ private ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
 ...
 ```
 
-* In MainActivity.java
-```
-...
-import com.reactnativecomponent.barcode.RCTCapturePackage;    //import RCTCapturePackage
-...
-@Override
-protected void onCreate(Bundle savedInstanceState) {
-    MainApplication application = (MainApplication) this.getApplication();
-    application.setReactNativeHost(new ReactNativeHost(application) {
-        @Override
-        protected boolean getUseDeveloperSupport() {
-            return BuildConfig.DEBUG;
-        }
-
-        @Override
-        protected List<ReactPackage> getPackages() {
-            return Arrays.<ReactPackage>asList(
-                    new MainReactPackage(),
-                    new RCTCapturePackage(MainActivity.this)    //register Module
-            );
-        }
-
-    });
-
-    super.onCreate(savedInstanceState);
-}
-```
-
 * In AndroidManifest.xml, add camera permissions
 ```
 ...
@@ -132,8 +99,8 @@ see [ReactNativeComponentDemos][0]
 
 ## Usage
 
-Install the package from npm with `npm install react-native-smart-barcode --save`.
-Then, require it from your app's JavaScript files with `import Barcode from 'react-native-smart-barcode'`.
+Install the package from npm with `npm install react-native-barcode-scan --save`.
+Then, require it from your app's JavaScript files with `import Barcode from 'react-native-barcode-scan'`.
 
 ```js
 
@@ -147,7 +114,7 @@ import {
     Alert,
 } from 'react-native'
 
-import Barcode from 'react-native-smart-barcode'
+import Barcode from 'react-native-barcode-scan'
 import TimerEnhance from 'react-native-smart-timer-enhance'
 
 class BarcodeTest extends Component {
@@ -218,5 +185,5 @@ scannerRectCornerColor | string | Yes      | `#09BB0D` | determines the color of
 
 [0]: https://github.com/cyqresig/ReactNativeComponentDemos
 [1]: https://github.com/zxing/zxing
-[2]: http://cyqresig.github.io/img/react-native-smart-barcode-preview-ios-v1.0.0.gif
-[3]: http://cyqresig.github.io/img/react-native-smart-barcode-preview-android-v1.0.0.gif
+[2]: http://cyqresig.github.io/img/react-native-barcode-scan-preview-ios-v1.0.0.gif
+[3]: http://cyqresig.github.io/img/react-native-barcode-scan-preview-android-v1.0.0.gif
