@@ -1,4 +1,4 @@
-# react-native-barcode-scan
+# react-native-barcodescan
 
 [![npm](https://img.shields.io/npm/v/react-native-smart-barcode.svg)](https://www.npmjs.com/package/react-native-smart-barcode)
 [![npm](https://img.shields.io/npm/l/react-native-smart-barcode.svg)](https://github.com/react-native-component/react-native-smart-barcode/blob/master/LICENSE)
@@ -10,7 +10,7 @@ The library uses [https://github.com/zxing/zxing][1] to decode the barcodes for 
 ## Installation
 
 ```
-npm install react-native-barcode-scan --save
+npm install react-native-barcodescan --save
 ```
 
 ## Installation (iOS)
@@ -31,8 +31,8 @@ npm install react-native-barcode-scan --save
 
 ```
 ...
-include ':react-native-barcode-scan'
-project(':react-native-barcode-scan').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-barcode-scan/android')
+include ':react-native-barcodescan'
+project(':react-native-barcodescan').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-barcodescan/android')
 ```
 
 * In `android/app/build.gradle`
@@ -42,7 +42,7 @@ project(':react-native-barcode-scan').projectDir = new File(rootProject.projectD
 dependencies {
     ...
     // From node_modules
-    compile project(':react-native-barcode-scan')
+    compile project(':react-native-barcodescan')
 }
 ```
 
@@ -94,8 +94,8 @@ see [ReactNativeComponentDemos][0]
 
 ## Usage
 
-Install the package from npm with `npm install react-native-barcode-scan --save`.
-Then, require it from your app's JavaScript files with `import Barcode from 'react-native-barcode-scan'`.
+Install the package from npm with `npm install react-native-barcodescan --save`.
+Then, require it from your app's JavaScript files with `import Barcode from 'react-native-barcodescan'`.
 
 ```js
 
@@ -109,7 +109,7 @@ import {
     Alert,
 } from 'react-native'
 
-import Barcode from 'react-native-barcode-scan'
+import Barcode from 'react-native-barcodescan'
 import TimerEnhance from 'react-native-smart-timer-enhance'
 
 class BarcodeTest extends Component {
@@ -180,5 +180,5 @@ scannerRectCornerColor | string | Yes      | `#09BB0D` | determines the color of
 
 [0]: https://github.com/cyqresig/ReactNativeComponentDemos
 [1]: https://github.com/zxing/zxing
-[2]: http://cyqresig.github.io/img/react-native-barcode-scan-preview-ios-v1.0.0.gif
-[3]: http://cyqresig.github.io/img/react-native-barcode-scan-preview-android-v1.0.0.gif
+[2]: http://cyqresig.github.io/img/react-native-barcodescan-preview-ios-v1.0.0.gif
+[3]: http://cyqresig.github.io/img/react-native-barcodescan-preview-android-v1.0.0.gif
