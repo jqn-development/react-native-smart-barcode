@@ -173,22 +173,14 @@ class BarcodeTest extends Component {
     }
 
     componentDidMount() {
-        let viewAppearCallBack = (event) => {
-            this.setTimeout( () => {
-                this.setState({
-                    viewAppear: true,
-                })
-            }, 255)
-
-        }
-        this._listeners = [
-            this.props.navigator.navigationContext.addListener('didfocus', viewAppearCallBack)
-        ]
-
+        this.timer = setTimeout(
+              () => this.setState({viewAppear: true}),
+              255
+            );
     }
 
     componentWillUnmount () {
-        this._listeners && this._listeners.forEach(listener => listener.remove());
+        this.timer && clearTimeout(this.timer);
     }
 
     _onBarCodeRead = (e) => {
